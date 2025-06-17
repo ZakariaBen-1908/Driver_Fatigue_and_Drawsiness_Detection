@@ -2,34 +2,81 @@
 
 ![Drowsiness Detection Preview](./live%20test/img.png)
 
-# Requirements
-## IMPORTANT
+# 📦 Requirements
 
-Download shape_predictor_68_face_landmarks.dat.bz2 from Shape Predictor 68 features Extract the file in the project folder using bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2
+## ⚠️ Important File Needed
+
+Download the facial landmark predictor model:
+
+###🔗 shape_predictor_68_face_landmarks.dat.bz2
+
+## Once downloaded:
+
+bash
+Copier
+Modifier
+bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2
+Place the extracted shape_predictor_68_face_landmarks.dat file in the project root directory.
+
+🔧 Python Dependencies
+Install the required libraries:
+
+bash
+Copier
+Modifier
+pip install -r requirements.txt
+
+## The main dependencies include:
 
 numpy
+
 dlib
+
 pygame
+
 imutils
-opencv_python
+
+opencv-python
+
 scipy
-Use pip install -r requirements.txtto install the given requirements.
 
-# Usage
-Detect Face and Eyes in a Single Image
-Put your file to be detected in images folder with name test.jpeg or change the file path in Line : 14 face_and_eye_detector_single_image.py to your image file.
+# 🚀 Usage
 
-# Run script using:
+## ✅ Detect Face and Eyes in a Single Image
 
+Place your image inside the images folder as test.jpeg, or
+
+Change the image path in face_and_eye_detector_single_image.py (Line 14) to match your image file.
+
+Run the script:
+
+bash
+Copier
+Modifier
 python face_and_eye_detector_single_image.py
-Detect Face and Eyes in a Webcam Feed
 
-# Run script using:
+## ✅ Detect Face and Eyes from Webcam Feed
+
+### Run the script:
+
+bash
+Copier
+Modifier
 
 python face_and_eye_detector_webcam_video.py
-Drowsiness Detection
 
-#Run script using:
+## ✅ Drowsiness Detection
+
+### Run the script:
+
+bash
+Copier
+Modifier
 
 python drowsiness_detect.py
-The algorithm for Eye Aspect Ratio was taken from pyimagesearch.com blog, by Adrian RoseBrock.
+
+ℹ️ The drowsiness detection system uses Eye Aspect Ratio (EAR) to determine eye closure over time.
+
+📚 Credit
+
+The Eye Aspect Ratio (EAR) technique is based on the blog post by Adrian Rosebrock from PyImageSearch.
