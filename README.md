@@ -1,6 +1,6 @@
 ## 🎥 Demo
 
-[Click to watch demo video](./live%20test/Drowsiness%20detection%20test.mp4)
+![Drowsiness Detection Preview](./live%20test/img.png)
 
 # Drowsiness Detection System
 ##Overview
