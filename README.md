@@ -1,3 +1,7 @@
+## 🎥 Demo
+
+[Click to watch demo video](./live test/Drowsiness detection test.mp4)
+
 # Drowsiness Detection System
 ##Overview
 This project is a Drowsiness Detection System that uses a Convolutional Neural Network (CNN) to detect whether a person's eyes are open or closed. If the system detects that the person's eyes are closed for a prolonged period, it triggers an alarm to alert the person. This system can be used in various scenarios, such as driving, to prevent accidents caused by drowsiness.
