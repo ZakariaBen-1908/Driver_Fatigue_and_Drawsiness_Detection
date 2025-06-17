@@ -8,22 +8,22 @@
 
 Download the facial landmark predictor model:
 
-###🔗 shape_predictor_68_face_landmarks.dat.bz2
+### 🔗 shape_predictor_68_face_landmarks.dat.bz2
 
 ## Once downloaded:
 
 bash
-Copier
-Modifier
+
 bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2
+
 Place the extracted shape_predictor_68_face_landmarks.dat file in the project root directory.
 
-🔧 Python Dependencies
+## 🔧 Python Dependencies
+
 Install the required libraries:
 
 bash
-Copier
-Modifier
+
 pip install -r requirements.txt
 
 ## The main dependencies include:
@@ -51,8 +51,7 @@ Change the image path in face_and_eye_detector_single_image.py (Line 14) to matc
 Run the script:
 
 bash
-Copier
-Modifier
+
 python face_and_eye_detector_single_image.py
 
 ## ✅ Detect Face and Eyes from Webcam Feed
@@ -60,8 +59,6 @@ python face_and_eye_detector_single_image.py
 ### Run the script:
 
 bash
-Copier
-Modifier
 
 python face_and_eye_detector_webcam_video.py
 
@@ -70,8 +67,6 @@ python face_and_eye_detector_webcam_video.py
 ### Run the script:
 
 bash
-Copier
-Modifier
 
 python drowsiness_detect.py
 
