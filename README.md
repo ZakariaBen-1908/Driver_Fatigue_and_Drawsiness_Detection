@@ -24,21 +24,11 @@ Install the required libraries:
 
 bash
 
-pip install -r requirements.txt
+<pre> ```text pip install -r requirements.txt ``` </pre>
 
 ## The main dependencies include:
 
-numpy
-
-dlib
-
-pygame
-
-imutils
-
-opencv-python
-
-scipy
+<pre> ```text numpy dlib pygame imutils opencv_python scipy ``` </pre>
 
 # 🚀 Usage
 
@@ -52,7 +42,7 @@ Run the script:
 
 bash
 
-python face_and_eye_detector_single_image.py
+<pre> ```python python face_and_eye_detector_single_image.py ``` </pre>
 
 ## ✅ Detect Face and Eyes from Webcam Feed
 
@@ -60,7 +50,7 @@ python face_and_eye_detector_single_image.py
 
 bash
 
-python face_and_eye_detector_webcam_video.py
+<pre> ```python python face_and_eye_detector_webcam_video.py ``` </pre>
 
 ## ✅ Drowsiness Detection
 
@@ -68,7 +58,7 @@ python face_and_eye_detector_webcam_video.py
 
 bash
 
-python drowsiness_detect.py
+<pre> ```python python drowsiness_detect.py ``` </pre>
 
 ℹ️ The drowsiness detection system uses Eye Aspect Ratio (EAR) to determine eye closure over time.
 
