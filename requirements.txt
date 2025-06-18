@@ -1,4 +1,5 @@
 numpy
+dlib
 pygame
 imutils
 opencv-python

@@ -12,7 +12,7 @@ import cv2
 
 #Initialize Pygame and load music
 pygame.mixer.init()
-pygame.mixer.music.load('audio/alert.wav')
+pygame.mixer.music.load('audio/alarm.wav')
 
 #Minimum threshold of eye aspect ratio below which alarm is triggerd
 EYE_ASPECT_RATIO_THRESHOLD = 0.3
@@ -48,6 +48,7 @@ video_capture = cv2.VideoCapture(0)
 
 #Give some time for camera to initialize(not required)
 time.sleep(2)
+start_drowsy_time = None
 
 while(True):
     #Read each frame and flip it, and convert to grayscale
@@ -88,15 +89,19 @@ while(True):
         cv2.drawContours(frame, [rightEyeHull], -1, (0, 255, 0), 1)
 
         #Detect if eye aspect ratio is less than threshold
-        if(eyeAspectRatio < EYE_ASPECT_RATIO_THRESHOLD):
+        if eyeAspectRatio < EYE_ASPECT_RATIO_THRESHOLD:
             COUNTER += 1
-            #If no. of frames is greater than threshold frames,
-            if COUNTER >= EYE_ASPECT_RATIO_CONSEC_FRAMES:
-                pygame.mixer.music.play(-1)
-                cv2.putText(frame, "You are Drowsy", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
+            if start_drowsy_time is None:
+                start_drowsy_time = time.time()
+            elif time.time() - start_drowsy_time >= 5:  # 5 seconds delay
+                if COUNTER >= EYE_ASPECT_RATIO_CONSEC_FRAMES:
+                    if not pygame.mixer.music.get_busy():
+                        pygame.mixer.music.play(-1)
+                    cv2.putText(frame, "You are Drowsy", (150, 200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
         else:
             pygame.mixer.music.stop()
             COUNTER = 0
+            start_drowsy_time = None  # Reset timer
 
     #Show video feed
     cv2.imshow('Video', frame)
